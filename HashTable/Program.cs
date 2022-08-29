@@ -7,7 +7,13 @@
             Console.WriteLine("Hash Map!!!");
 
             LinkedHashMap<string, int> hashMap = new LinkedHashMap<string, int>(5);
-            string sentence = "to be or not to be";
+          //UC1
+            //string sentence = "to be or not to be";
+        
+            //UC2
+            string sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting " +
+                            "themselves deliberately into paranoid avoidable situations"
+               ;
             string[] words = sentence.ToLower().Split(" ");
             foreach (var word in words)
             {
@@ -19,9 +25,12 @@
                 hashMap.Add(word, value);
             }
 
-            int wordFrequency = hashMap.Get("to");
-            Console.WriteLine("frequency of word \"to\" in sentense \"to be or not to be\" is ");
-            Console.WriteLine(wordFrequency);
+            // int wordFrequency = hashMap.Get("to");
+            // Console.WriteLine("frequency of word \"to\" in sentense \"to be or not to be\" is "+wordFrequency);
+           
+            int wordFrequency = hashMap.Get("paranoid");
+            Console.WriteLine("frequency of word \"paranoid\" is " + wordFrequency);
+
         }
     }
 }
